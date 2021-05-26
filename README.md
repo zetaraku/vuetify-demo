@@ -1,6 +1,6 @@
-# vite-vue2-template
+# vuetify-demo
 
-This is a minimal [Vite](https://vitejs.dev/) + [Vue 2](https://vuejs.org/) starter template, using [vite-plugin-vue2](https://github.com/underfin/vite-plugin-vue2).
+This is a minimal demo to reproduce the behavior changes of placeholder after Vuetify v2.4.0.
 
 ## Project setup
 ```
@@ -12,15 +12,33 @@ npm install
 npm run dev
 ```
 
-### Build for production
-```
-npm run build
-```
+:warning: Massive deprecation warning would appear due to the [Breaking Change: Slash as Division](https://sass-lang.com/documentation/breaking-changes/slash-div) in new version of `sass`.
 
-### Locally preview production build
-```
-npm run dev
-```
+## Affected components
 
-### Customize configuration
-See [Configuring Vite](https://vitejs.dev/config/) and [vite-plugin-vue2](https://github.com/underfin/vite-plugin-vue2).
+* `v-autocomplete`
+* `v-combobox`
+* `v-file-input`
+* `v-overflow-btn`
+* `v-select`
+* `v-textarea`
+* `v-text-field`
+
+## Diff between versions
+
+* `npm i vuetify@2.3.23` works fine
+
+![vuetify-2.3.23](./src/assets/vuetify-2.3.23.png)
+
+* `npm i vuetify@2.4.0` placeholders disappeared, `v-file-input` misplaced.
+
+![vuetify-2.4.0](./src/assets/vuetify-2.4.0.png)
+
+* `npm i vuetify@2.5.1` fixed most of the behaviors by introducing `persistent-placeholder`, but **placeholders of `v-file-input` and `v-select` are still missing after applying `persistent-placeholder`**.
+
+![vuetify-2.5.1](./src/assets/vuetify-2.5.1.png)
+
+## Related issues
+
+* [#12839](https://github.com/vuetifyjs/vuetify/issues/12839) [Feature Request] persistent-placeholder for VTextField
+* [#13169](https://github.com/vuetifyjs/vuetify/issues/13169) [Bug Report] Placeholder text on empty v-select no longer forces label into field border
