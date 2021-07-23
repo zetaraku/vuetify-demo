@@ -38,7 +38,13 @@ npm run dev
 
 ![vuetify-2.5.1](./src/assets/vuetify-2.5.1.png)
 
+* `npm i vuetify@2.5.5` props `persistent-placeholder` now works on `v-select`, but **placeholders of `v-file-input` is still missing after applying `persistent-placeholder`**.
+
+![vuetify-2.5.5](./src/assets/vuetify-2.5.5.png)
+
 ## Related issues
 
 * [#12839](https://github.com/vuetifyjs/vuetify/issues/12839) [Feature Request] persistent-placeholder for VTextField
 * [#13169](https://github.com/vuetifyjs/vuetify/issues/13169) [Bug Report] Placeholder text on empty v-select no longer forces label into field border
+* [#13666](https://github.com/vuetifyjs/vuetify/issues/13666) [Bug Report][2.5.0] VSelect not showing persistent placeholder
+* [#13792](https://github.com/vuetifyjs/vuetify/issues/13792) [Bug Report][2.5.3] v-select doesn't display placeholder when setting persistent-placeholder

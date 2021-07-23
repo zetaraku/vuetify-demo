@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "vue": "^2.6.11",
-    "vuetify": "^2.3.23"
+    "vuetify": "^2.5.7"
   },
   "devDependencies": {
     "sass": "^1.32.0",
